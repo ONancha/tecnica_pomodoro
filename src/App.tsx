@@ -1,11 +1,13 @@
+import { TaskContextProvider } from './contexts/TaskContext/TaskContextProvider';
+import { Home } from './pages/Home';
+
 import './styles/global.css';
 import './styles/theme.css';
-import { MainTemplate } from './templates/MainTemplate';
 
 export function App() {
   return (
-    <>
-      <MainTemplate>jibi</MainTemplate>
-    </>
+    <TaskContextProvider>
+      <Home />
+    </TaskContextProvider>
   );
 }
